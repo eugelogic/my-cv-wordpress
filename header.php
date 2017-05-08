@@ -39,11 +39,16 @@
 	================================================== -->
 	<div class="intro">
 		<div class="container text-center">
-			<img class="profile-image" src="assets/Eugene Molari.jpeg" alt="Image of Eugene Molari">
 
-			<h1 class="name">Eugene Molari</h1>
+			<?php if ( has_post_thumbnail() ) {
+        the_post_thumbnail();
+			 } else {
+			echo	'<img class="profile-image" src="' . get_template_directory_uri() . '/assets/img/default-thumbnail.jpg" alt="Deafult Image">';
+			} ?>
 
-			<div class="title">WordPress Developer - London</div>
+			<h1 class="name"><?php bloginfo( 'name' ); ?></h1>
+
+			<div class="title"><?php bloginfo( 'description' ); ?></div>
 
 			<!-- SOCIAL ICONS -->
 			<ul class="social list-inline">
