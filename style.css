@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Theme Specify Styles
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -892,4 +893,329 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Theme Specify Styles
+--------------------------------------------------------------*/
+body, a {
+  font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+.top-bar {
+  min-height: 140px;
+  background-color: #4CD0E0;
+}
+
+.intro {
+  background: #44BBC9;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  position: relative;
+  color: white;
+}
+
+.intro img {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  margin-left: -80px;
+  left: 50%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.intro .name {
+  font-size: 50px;
+  margin: -10px 0 20px;
+}
+
+.intro .title {
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.social a {
+  font-size: 4rem;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.social a:hover {
+  color: #2D7C86;
+}
+
+.contact-info {
+  font-size: 2rem;
+  background: #3CA6B3;
+  min-height: 50px;
+}
+
+.contact-info ul {
+  color: white;
+  margin-top: 15px;
+}
+
+.contact-info a {
+  color: white;
+  margin-top: 15px;
+}
+
+.contact-info i {
+  margin-right: 50px;
+}
+
+.profile {
+  background: #35919C;
+}
+
+.profile p {
+  color: white;
+  line-height: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.page-nav-space-holder {
+  background: #2D7C86;
+  min-height: 50px;
+}
+.page-nav-space-holder ul {
+  margin-top: 13px;
+  text-transform: uppercase;
+}
+
+.page-nav-space-holder a {
+  color: #d7d7d7;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.page-nav-space-holder a:hover {
+  color: white;
+}
+
+#tech-skills,
+#other-skills,
+#pie-charts,
+#portfolio {
+  padding: 30px 0;
+}
+
+.unstyled,
+.filters {
+  list-style: none;
+}
+
+.unstyled i {
+  margin-right: 20px;
+}
+
+#tech-skills ul,
+#other-skills ul {
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+#tech-skills li,
+#other-skills li {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.title-bullet-list {
+  color: #555;
+  border-bottom: 2px solid #555;
+}
+
+#other-skills,
+#portfolio {
+  background: #eeeeee;
+}
+
+/*--------------------------------------------------------------
+# Pie charts
+--------------------------------------------------------------*/
+#pie-charts h2 {
+  margin-bottom: 40px;
+}
+
+#pie-charts .row {
+  margin-bottom: 40px;
+}
+
+.chart {
+  width: 150px;
+  height: 150px;
+  /*vertical-align: middle;*/
+  position: relative;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* It looks like "canvas" is dynamically added to the index.html */
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chart span {
+  line-height: 150px;
+}
+
+.chart-box h4 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.chart-box p {
+  text-align: center;
+  font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+#portfolio h2 {
+  margin-bottom: 40px;
+}
+
+#portfolio .filters {
+  margin-bottom: 50px;
+}
+
+#portfolio ul {
+  text-align: center;
+  padding-bottom: 0.25px;
+  border-bottom: 1px solid #555;
+}
+
+#portfolio ul li {
+  display: inline-block;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+#portfolio .active {
+  color: #35919c;
+  border-bottom: 2px solid #35919c;
+}
+
+.items-wrapper {
+  position: relative;
+  height: 600px;
+}
+
+.item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-bottom: 30px;
+}
+
+.item-inner {
+  background: #44bbc9;
+  color: white;
+  border-bottom-right-radius: 50px;
+  width: 100%;
+}
+
+.content {
+  padding: 30px 30px 75px;
+  position: relative;
+}
+
+.content h3 {
+  margin-top: 0;
+}
+
+.meta {
+  font-size: 0.75em;
+}
+
+.btn {
+  position: absolute;
+  bottom: 30px;
+  left: 46px;
+  background-color: transparent;
+  border-color: white;
+}
+
+.btn:hover {
+  color: #2d7c86;
+  border-color: #2d7c86;
+}
+
+.item-inner a {
+  color: white;
+}
+
+figure {
+  overflow: hidden;
+}
+
+figure img {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+figure img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure {
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  top: 65px;
+  left: 8px;
+}
+
+figcaption h5 {
+  text-transform: uppercase;
+  transform: rotate(-20deg);
+  text-align: center;
+  font-size: 2em;
+}
+
+mark {
+    background-color: #fec200;
+    padding: 0.05em;
+    line-height: 1.3em;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  background: #333;
+  min-height: 100px;
+}
+
+footer p,
+footer a {
+  color: #e3e3e3;
+  padding-top: 40px;
+  font-size: 0.9em;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
 }
