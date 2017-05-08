@@ -114,14 +114,27 @@ function mycv_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	// Eugene's additions here blow:
 	// Bootstrap core CSS
-	wp_enqueue_style( 'mycv-bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '20170508', true );
+	wp_enqueue_style( 'mycv-bootstrap-css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), '20170508' );
 	// Bootstrap core js
 	wp_enqueue_script( 'mycv-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20170508', true );
 	// FontAwesome icons
-	wp_enqueue_style( 'mycv-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '20170508', true );
+	wp_enqueue_style( 'mycv-font-awesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '20170508' );
 	// Google Fonts
 	wp_enqueue_style( 'mycv-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700' );
+	// jQuery (necessary for Bootstrap's JavaScript plugins and "easy pie chart")
+	wp_enqueue_script( 'mycv-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '20170508', true );
+	// Link to the main "easy pie chart" js files
+	wp_enqueue_script( 'mycv-easy-pie-chart-1', get_template_directory_uri() . '/js/jquery.easypiechart.min.js', array(), '20170508', true );
+	wp_enqueue_script( 'mycv-easy-pie-chart-2', get_template_directory_uri() . '/js/easypiechart.js', array(), '20170508', true );
+	// Link to Isotope & imagesLoaded js files
+	wp_enqueue_script( 'mycv-isotope-1', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '20170508', true );
+	wp_enqueue_script( 'mycv-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '20170508', true );
+	wp_enqueue_script( 'mycv-isotope-2', get_template_directory_uri() . '/js/jquery.isotope.js', array(), '20170508', true );
+	// "back to top" plugin link
+	// "scroll to" plugin link
+	// "???" plugin link
 }
 add_action( 'wp_enqueue_scripts', 'mycv_scripts' );
 
