@@ -114,6 +114,14 @@ function mycv_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	// Bootstrap core CSS
+	wp_enqueue_style( 'mycv-bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '20170508', true );
+	// Bootstrap core js
+	wp_enqueue_script( 'mycv-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20170508', true );
+	// FontAwesome icons
+	wp_enqueue_style( 'mycv-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '20170508', true );
+	// Google Fonts
+	wp_enqueue_style( 'mycv-google-font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'mycv_scripts' );
 
